@@ -20,9 +20,10 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+
 }));
 
-export default function MenuAppBar() {
+export default function NavBar() {
     const classes = useStyles();
     const [auth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -38,14 +39,14 @@ export default function MenuAppBar() {
 
     return (
         <div className={classes.root}>
-           <AppBar position="static" color={'silver'}>
+           <AppBar position="static" color={'transparent'}>
                 <Toolbar >
 
                     <img src={logo} alt="Logo"/>
 
 
                     <Typography variant="h6" className={classes.title}>
-                        TuPedido
+                        Welcome
                     </Typography>
                     {auth && (
                         <div>
@@ -58,6 +59,7 @@ export default function MenuAppBar() {
                             >
                                 <AccountCircle />
                             </IconButton>
+
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorEl}

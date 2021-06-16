@@ -1,13 +1,12 @@
 import './App.css';
-import Header from "./components/header/NavBar";
-import HelloWorld from "./components/HelloWorld/HelloWorld";
+import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
-    const name = 'Roxana';
   return (
     <div className="App">
-      <Header/>
-        <HelloWorld name={name}/>
+      <NavBar/>
+        <ItemListContainer/>
     </div>
   );
 }

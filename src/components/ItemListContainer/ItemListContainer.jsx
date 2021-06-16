@@ -1,12 +1,11 @@
 import React from 'react';
-import {Restaurants} from "../../api/restaurants";
 import './ItemListContainer.css';
 import ItemCard from "../ItemCard/ItemCard";
 
 
-export default function ItemListContainer() {
+export default function ItemListContainer(props) {
 
-    const restaurants = Restaurants;
+    const {restaurants} = props;
 
     return (
         <div className='list-container'>

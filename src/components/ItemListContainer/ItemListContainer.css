@@ -4,4 +4,9 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-top: 1.5rem;
+}
+
+.list-container > div {
+    margin-right: 1rem;
 }

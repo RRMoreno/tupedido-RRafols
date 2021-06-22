@@ -20,22 +20,17 @@ const StyledBreadcrumb = withStyles((theme) => ({
     },
 }))(Chip);
 
-function handleClick(event) {
-    event.preventDefault();
-    console.info('You clicked a breadcrumb.');
-}
-
 export default function MainMenu() {
 
     const menuItems = MenuItems;
     return (
         <Breadcrumbs aria-label="breadcrumb">
-            {menuItems.map(item => {
+            {menuItems.map((item, index) => {
                 return <StyledBreadcrumb
                     component="a"
                     href={item.url}
                     label={item.label}
-                    onClick={handleClick}
+                    key={index}
                 />
             })}
         </Breadcrumbs>

@@ -1,25 +1,31 @@
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import React from "react";
-import axios from "axios";
-import Restaurant from "./models/restaurant";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Home from "./components/Home/Home";
+import Restaurants from "./components/Restaurants/Restaurants";
+import Supermarket from "./components/Supermarket/Supermarket";
 
 function App() {
-    let [restaurants, setRestaurants] = React.useState([]);
-    React.useEffect(() => {
-        axios.get('/restaurant').then(response => {
-            let data = response.data.map(x => {
-                return new Restaurant(x);
-            });
-            setRestaurants(data);
-        });
-    }, []);
+
     return (
-        <div className="App">
-            <NavBar/>
-            <ItemListContainer restaurants={restaurants}/>
-        </div>
+        <Router>
+            <div className="App">
+                <NavBar/>
+                <Switch>
+                    <Route exact path="/">
+                        <Home/>
+                    </Route>
+                    <Route path="/restaurants">
+                        <Restaurants/>
+                    </Route>
+                    <Route path="/supermarket">
+                        <Supermarket/>
+                    </Route>
+                </Switch>
+            </div>
+
+        </Router>
     );
 }
 

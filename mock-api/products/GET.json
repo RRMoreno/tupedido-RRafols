@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Milk",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0DyW5BE4qw_u1pebrAe0j8fiP0rLCvBCrVg&usqp=CAU",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 1.25,
+    "qty": 15
+  },
+  {
+    "id": 2,
+    "name": "Rice",
+    "image": "https://www.trafalgar.com/real-word/wp-content/uploads/sites/3/2020/05/spoon-rice.jpeg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 1.20,
+    "qty": 8
+  },
+  {
+    "id": 3,
+    "name": "MezzoMix",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81jsVQYxRFL._SL1500_.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 0.50,
+    "qty": 24
+  },
+  {
+    "id": 4,
+    "name": "Haagen dazs",
+    "image": "https://i.insider.com/5966941ec50c29ad008b4640?width=300&format=jpeg&auto=webp",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 5.99,
+    "qty": 50
+  },
+  {
+    "id": 5,
+    "name": "Nutella",
+    "image": "https://www.supermarkt24h.de/media/image/product/3861/lg/lebensmittel-brotaufstrich-nuss-nougat-creme-nutella-450g-a-1349473565.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "price": 1.50,
+    "qty": 12
+  }
+]

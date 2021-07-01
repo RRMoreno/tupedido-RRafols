@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import Restaurants from "./components/Restaurants/Restaurants";
 import Supermarket from "./components/Supermarket/Supermarket";
 import RestaurantDetails from "./components/RestaurantDetails/RestaurantDetails";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
                     </Route>
                     <Route path="/details/:id">
                         <RestaurantDetails/>
+                    </Route>
+                    <Route path="/product/:id">
+                        <ProductDetails/>
                     </Route>
                 </Switch>
             </div>

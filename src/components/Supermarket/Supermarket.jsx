@@ -1,17 +1,23 @@
 import React from 'react';
-import axios from "axios";
 import ProductList from "../ProductList/ProductList";
 import Product from "../../models/product";
+import {getFirestore} from "../../firebase";
 
 function Supermarket() {
     let [products, setProducts] = React.useState([]);
     React.useEffect(() => {
-        axios.get('/products').then(response => {
-            let data = response.data.map(x => {
-                return new Product(x);
-            });
-            setProducts(data);
-        });
+        const db = getFirestore();
+        const itemCollection = db.collection("products");
+        itemCollection.get().then(querySnapshot => {
+            if (querySnapshot.empty) {
+                setProducts([]);
+            } else {
+                const prods = querySnapshot.docs.map(prod => {
+                    return new Product(prod.data());
+                });
+                setProducts(prods);
+            }
+        })
     }, []);
     return (
         <ProductList products={products}/>

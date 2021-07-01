@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "name": "Croquetas Caseras",
+    "category": "Entrante",
+    "price": 3,
+    "image": "https://cocinaconcuba.files.wordpress.com/2014/05/croquetas-de-jamc3b3n.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Garbanzos Fritos",
+    "category": "Entrante",
+    "price": 4,
+    "image": "http://1.bp.blogspot.com/-aN9CqBaQVC8/VpJ49Mk6S5I/AAAAAAAByZs/KaIbAZM-G6I/s1600/20160110_150835.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Tosotones Rellenos",
+    "category": "Entrante",
+    "price": 4,
+    "image": "https://cocinaconcuba.files.wordpress.com/2013/01/tostones-rellenos1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Filete de Pescado Grille",
+    "category": "Pescados y Mariscos",
+    "price": 7.50,
+    "image": "https://recetacubana.es/wp-content/uploads//2019/09/filete-de-pescado-a-la-plancha.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Filete de Pescado Canciller",
+    "category": "Pescados y Mariscos",
+    "price": 8.50,
+    "image": "https://www.cocina-cubana.com/base/stock/Recipe/113-image/113-image_web.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Camarones Grillé, Rebozados o Enchilados",
+    "category": "Pescados y Mariscos",
+    "price": 8.50,
+    "image": "https://media.alamesacuba.com/media/delivery/Camarones_rebozados_Emperador_Domicilios_alamesacuba.com.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bistec de Cerdo Grillé",
+    "category": "Cerdo",
+    "price": 5.50,
+    "image": "https://media.alamesacuba.com/media/delivery/BistecCerdo_3Chinitos_Domicilios_alamesacuba.com.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Bistec de Cerdo Uruguayo",
+    "category": "Cerdo",
+    "price": 7,
+    "image": "https://www.cubaneandoconmario.com/wp-content/uploads/2017/07/Bistec-uruguayo8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Lonjas de Cerdo Asadas al Carbón",
+    "category": "Cerdo",
+    "price": 6,
+    "image": "https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/12/27/5e99828b7a8bb.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Pollo Asado al Carbón",
+    "category": "Pollo",
+    "price": 6.50,
+    "image": ""
+  },
+  {
+    "id": 11,
+    "name": "Pollo Deshuesado Grillé",
+    "category": "Pollo",
+    "price": 6.50,
+    "image": ""
+  },
+  {
+    "id": 12,
+    "name": "Pollo Cordon Bleu",
+    "category": "Pollo",
+    "price": 8,
+    "image": ""
+  }
+]
+

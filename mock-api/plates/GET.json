@@ -4,84 +4,96 @@
     "name": "Croquetas Caseras",
     "category": "Entrante",
     "price": 3,
-    "image": "https://cocinaconcuba.files.wordpress.com/2014/05/croquetas-de-jamc3b3n.jpg"
+    "image": "https://cocinaconcuba.files.wordpress.com/2014/05/croquetas-de-jamc3b3n.jpg",
+    "qty": 10
   },
   {
     "id": 2,
     "name": "Garbanzos Fritos",
     "category": "Entrante",
     "price": 4,
-    "image": "http://1.bp.blogspot.com/-aN9CqBaQVC8/VpJ49Mk6S5I/AAAAAAAByZs/KaIbAZM-G6I/s1600/20160110_150835.jpg"
+    "image": "http://1.bp.blogspot.com/-aN9CqBaQVC8/VpJ49Mk6S5I/AAAAAAAByZs/KaIbAZM-G6I/s1600/20160110_150835.jpg",
+    "qty": 10
   },
   {
     "id": 3,
     "name": "Tosotones Rellenos",
     "category": "Entrante",
     "price": 4,
-    "image": "https://cocinaconcuba.files.wordpress.com/2013/01/tostones-rellenos1.jpg"
+    "image": "https://cocinaconcuba.files.wordpress.com/2013/01/tostones-rellenos1.jpg",
+    "qty": 10
   },
   {
     "id": 4,
     "name": "Filete de Pescado Grille",
     "category": "Pescados y Mariscos",
     "price": 7.50,
-    "image": "https://recetacubana.es/wp-content/uploads//2019/09/filete-de-pescado-a-la-plancha.jpg"
+    "image": "https://recetacubana.es/wp-content/uploads//2019/09/filete-de-pescado-a-la-plancha.jpg",
+    "qty": 10
   },
   {
     "id": 5,
     "name": "Filete de Pescado Canciller",
     "category": "Pescados y Mariscos",
     "price": 8.50,
-    "image": "https://www.cocina-cubana.com/base/stock/Recipe/113-image/113-image_web.jpg"
+    "image": "https://www.cocina-cubana.com/base/stock/Recipe/113-image/113-image_web.jpg",
+    "qty": 10
   },
   {
     "id": 6,
     "name": "Camarones Grillé, Rebozados o Enchilados",
     "category": "Pescados y Mariscos",
     "price": 8.50,
-    "image": "https://media.alamesacuba.com/media/delivery/Camarones_rebozados_Emperador_Domicilios_alamesacuba.com.jpg"
+    "image": "https://media.alamesacuba.com/media/delivery/Camarones_rebozados_Emperador_Domicilios_alamesacuba.com.jpg",
+    "qty": 10
   },
   {
     "id": 7,
     "name": "Bistec de Cerdo Grillé",
     "category": "Cerdo",
     "price": 5.50,
-    "image": "https://media.alamesacuba.com/media/delivery/BistecCerdo_3Chinitos_Domicilios_alamesacuba.com.jpeg"
+    "image": "https://media.alamesacuba.com/media/delivery/BistecCerdo_3Chinitos_Domicilios_alamesacuba.com.jpeg",
+    "qty": 10
   },
   {
     "id": 8,
     "name": "Bistec de Cerdo Uruguayo",
     "category": "Cerdo",
     "price": 7,
-    "image": "https://www.cubaneandoconmario.com/wp-content/uploads/2017/07/Bistec-uruguayo8.jpg"
+    "image": "https://www.cubaneandoconmario.com/wp-content/uploads/2017/07/Bistec-uruguayo8.jpg",
+    "qty": 10
   },
   {
     "id": 9,
     "name": "Lonjas de Cerdo Asadas al Carbón",
     "category": "Cerdo",
     "price": 6,
-    "image": "https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/12/27/5e99828b7a8bb.jpeg"
+    "image": "https://www.lavanguardia.com/files/article_main_microformat/uploads/2018/12/27/5e99828b7a8bb.jpeg",
+    "qty": 10
   },
   {
     "id": 10,
     "name": "Pollo Asado al Carbón",
     "category": "Pollo",
     "price": 6.50,
-    "image": ""
+    "image": "https://lh3.googleusercontent.com/ZWqCEzd46fzJy-4UtuyU9lkllh2pNvhmRoXfwzP9v6ugBO6Vw2bYR63YO2dQl8CavF3exFI_=w1080-h608-p-no-v0",
+    "qty": 10
   },
   {
     "id": 11,
     "name": "Pollo Deshuesado Grillé",
     "category": "Pollo",
     "price": 6.50,
-    "image": ""
+    "image": "https://media.alamesacuba.com/media/delivery/CerdoAsado_A_Domicilio_LaBicicleta_alamesacuba.jpg",
+    "qty": 0
   },
   {
     "id": 12,
     "name": "Pollo Cordon Bleu",
     "category": "Pollo",
     "price": 8,
-    "image": ""
+    "image": "https://recetaslacocina.com/wp-content/uploads/2020/05/cordon-bleu-de-pollo-de-pollo-relleno-de-jamon-y-queso.jpg",
+    "qty": 10
   }
 ]
 

@@ -6,6 +6,7 @@ import {Grid} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import './ProductDetails.scss';
 import {Rating} from "@material-ui/lab";
+import {Counter} from "../Counter/Counter";
 
 function ProductDetails() {
 
@@ -48,6 +49,7 @@ function ProductDetails() {
                             </Typography>
                             <Typography variant="body1" color="textSecondary"
                                         className="in-stock">{inStock()}</Typography>
+                            <Counter stock={product.qty}/>
                         </div>
 
                     </div>

@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import CartWidget from "../CartWidget/CartWidget";
 import {Favorite} from "@material-ui/icons";
 import IconButton from "@material-ui/core/IconButton";
+import {Counter} from "../Counter/Counter";
 
 const useStyles = makeStyles({
     root: {
@@ -42,12 +43,7 @@ export default function PlateCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
-                    <CartWidget/>
-                </Button>
-                <IconButton aria-label="add to favorites">
-                    <Favorite/>
-                </IconButton>
+                <Counter stock={plate.qty}/>
             </CardActions>
         </Card>
     );

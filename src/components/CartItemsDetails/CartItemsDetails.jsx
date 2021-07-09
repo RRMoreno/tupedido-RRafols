@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {CartContext} from "../../context/cartContext";
 import Button from '@material-ui/core/Button';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -67,9 +68,12 @@ export default function CartItemsDetails() {
                 <Typography>
                     Total Price: {calcTotal()}
                 </Typography>
-                <Button variant="contained" color="primary">
-                    Check out
-                </Button>
+                <Link to={'/cart/'}>
+                    <Button variant="contained" color="primary" >
+                        Check out
+                    </Button>
+                </Link>
+
 
             </div>
         </div>

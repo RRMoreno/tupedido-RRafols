@@ -9,6 +9,7 @@ import RestaurantDetails from "./components/RestaurantDetails/RestaurantDetails"
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import {CartContext} from "./context/cartContext";
 import CartItemsDetails from "./components/CartItemsDetails/CartItemsDetails";
+import CartPage from "./components/CartPage/CartPage";
 
 
 function App() {
@@ -88,6 +89,9 @@ function App() {
                             </Route>
                             <Route path="/product/:id">
                                 <ProductDetails/>
+                            </Route>
+                            <Route path="/cart">
+                                <CartPage/>
                             </Route>
                         </Switch>
 

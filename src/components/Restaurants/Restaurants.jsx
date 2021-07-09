@@ -1,6 +1,6 @@
 import React from 'react';
 import Restaurant from "../../models/restaurant";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import RestaurantListContainer from "../RestaurantListContainer/RestaurantListContainer";
 import {getFirestore} from "../../firebase";
 
 
@@ -21,7 +21,7 @@ function Restaurants(props) {
         })
     }, []);
     return (
-        <ItemListContainer restaurants={restaurants}/>
+        <RestaurantListContainer restaurants={restaurants}/>
     );
 }
 

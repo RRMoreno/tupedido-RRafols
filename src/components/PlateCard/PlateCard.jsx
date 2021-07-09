@@ -43,7 +43,7 @@ export default function PlateCard(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Counter stock={plate.qty}/>
+                <Counter product={plate}/>
             </CardActions>
         </Card>
     );

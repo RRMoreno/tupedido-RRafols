@@ -23,9 +23,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function NavBar() {
+export default function NavBar(props) {
     const classes = useStyles();
     const [auth] = React.useState(true);
+    const {onCartClick} = props;
 
 
     return (
@@ -42,7 +43,7 @@ export default function NavBar() {
                                 <IconButton color="inherit">
                                     <AccountCircle/>
                                 </IconButton>
-                                <CartWidget/>
+                                <CartWidget onCartClick={onCartClick}/>
                             </div>
                         )}
                         <Hidden lgUp>

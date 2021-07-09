@@ -1,11 +1,12 @@
-import React from 'react';
-import {Button, FormControl, InputAdornment, OutlinedInput} from "@material-ui/core";
+import React, {useContext} from 'react';
+import {FormControl, InputAdornment, OutlinedInput} from "@material-ui/core";
 import clsx from "clsx";
 import IconButton from "@material-ui/core/IconButton";
 import {Add, AddShoppingCart, Remove} from "@material-ui/icons";
 import CardActions from "@material-ui/core/CardActions";
 import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
+import {CartContext} from "../../context/cartContext";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -48,20 +49,25 @@ const useStyles = makeStyles((theme) => ({
 export function Counter(props) {
 
     const classes = useStyles();
-    const {stock} = props;
+    const context = useContext(CartContext);
+    const {product} = props;
+    const stock = product.qty;
     const [quantity, setQuantity] = React.useState(0);
     const handleChange = (event) => {
         setQuantity(event.target.value);
+        context.setQuantity(product, event.target.value);
     };
 
     const increaseQuantity = () => {
         if (stock > quantity) {
             setQuantity(quantity + 1);
+            context.addItem(product);
         }
     }
 
     const decreaseQuantity = () => {
         setQuantity(quantity - 1);
+        context.decreaseItem(product);
     }
 
     return (
@@ -90,12 +96,6 @@ export function Counter(props) {
                 </FormControl>}
 
             </CardActions>}
-            {
-                quantity > 0 && <Button className={classes.margin} variant="outlined" color="primary">
-                    Add to cart
-                </Button>
-            }
-
         </div>
 
     );

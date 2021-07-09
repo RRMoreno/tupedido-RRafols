@@ -1,9 +1,9 @@
 import React from 'react';
-import './ItemListContainer.scss';
-import ItemCard from "../ItemCard/ItemCard";
+import './RestaurantListContainer.scss';
+import ItemCard from "../RestaurantCard/RestaurantCard";
 
 
-export default function ItemListContainer(props) {
+export default function RestaurantListContainer(props) {
 
     const {restaurants} = props;
 

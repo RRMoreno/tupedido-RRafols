@@ -34,7 +34,7 @@ function ProductDetails() {
 
     return (
         <Grid direction="column" className="details">
-            {product && <Grid direction="column" className="details-container">
+            <div>{product && <Grid direction="column" className="details-container">
                 <Typography variant="h4" color="textSecondary" className='name'>{product.name}</Typography>
                 <div className="info">
                     <img src={product.image}/>
@@ -49,12 +49,13 @@ function ProductDetails() {
                             </Typography>
                             <Typography variant="body1" color="textSecondary"
                                         className="in-stock">{inStock()}</Typography>
-                            <Counter stock={product.qty}/>
+                            <Counter product={product}/>
                         </div>
 
                     </div>
                 </div>
-            </Grid>}
+            </Grid>}</div>
+
         </Grid>
     );
 }

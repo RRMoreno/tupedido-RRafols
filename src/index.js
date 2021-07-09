@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Auth0Provider} from "@auth0/auth0-react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Auth0Provider domain="rrafolsmoreno.eu.auth0.com" clientId="h32seM8H2bT3HBkuHYtvJMJWe7nmPXcd">
+        <App />
+      </Auth0Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -68,8 +68,7 @@ export default function ProductCard(props) {
             <span className="price">
                     	&euro;{product.price}
             </span>
-            <Counter stock={product.qty}/>
-
+            <Counter product={product}/>
         </Card>
     );
 };

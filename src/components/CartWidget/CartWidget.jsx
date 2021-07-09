@@ -1,16 +1,23 @@
-import React from 'react';
-import IconButton from "@material-ui/core/IconButton";
+import React, {useContext} from 'react';
 import {ShoppingCart} from "@material-ui/icons";
+import {Badge} from "@material-ui/core";
+import {CartContext} from "../../context/cartContext";
 
-export default function CartWidget() {
+export default function CartWidget(props) {
+    const {cartItems} = useContext(CartContext);
+    const {onCartClick} = props;
+
+    function calcTotal() {
+        let sum = 0;
+        for (const item of cartItems) {
+            sum += item.quantity;
+        }
+        return sum;
+    }
+
     return (
-        <IconButton
-            aria-label="cart"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            color="inherit"
-        >
-            <ShoppingCart />
-        </IconButton>
+        <Badge badgeContent={calcTotal()} color="primary">
+            <ShoppingCart onClick={onCartClick}/>
+        </Badge>
     );
 };

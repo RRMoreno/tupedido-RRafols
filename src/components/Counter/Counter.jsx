@@ -52,7 +52,8 @@ export function Counter(props) {
     const context = useContext(CartContext);
     const {product} = props;
     const stock = product.qty;
-    const [quantity, setQuantity] = React.useState(0);
+    const cartItem = context.cartItems.find(x => x.item.id === product.id);
+    const [quantity, setQuantity] = React.useState(cartItem ? cartItem.quantity : 0);
     const handleChange = (event) => {
         setQuantity(event.target.value);
         context.setQuantity(product, event.target.value);

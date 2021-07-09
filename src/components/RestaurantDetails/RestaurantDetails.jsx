@@ -26,21 +26,24 @@ export default function RestaurantDetails() {
         }, [id]);
 
     return (
-        <Grid direction="column" className="details">
-            {restaurant && <Grid direction="column" className="details-container">
-                <Typography variant="h4" color="textSecondary" className='name'>{restaurant.name}</Typography>
-                <div className="info">
-                    <img src={restaurant.image} />
-                    <div className="text-info">
-                        <Typography variant="body2" color="textSecondary" className="description">{restaurant.description}</Typography>
-                        <div>
-                            <Icon><Home/></Icon>
-                            <Typography variant="body2" color="textSecondary" className="address">{restaurant.address}</Typography>
+        <div className="container">
+            <Grid direction="column" className="details">
+                {restaurant && <Grid direction="column" className="details-container">
+                    <Typography variant="h4" color="textSecondary" className='name'>{restaurant.name}</Typography>
+                    <div className="info">
+                        <img src={restaurant.image} />
+                        <div className="text-info">
+                            <Typography variant="body2" color="textSecondary" className="description">{restaurant.description}</Typography>
+                            <div>
+                                <Icon><Home/></Icon>
+                                <Typography variant="body2" color="textSecondary" className="address">{restaurant.address}</Typography>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </Grid>}
-            <PlateList/>
-        </Grid>
+                </Grid>}
+                <PlateList/>
+            </Grid>
+        </div>
+
     );
 }

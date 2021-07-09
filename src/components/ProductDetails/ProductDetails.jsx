@@ -33,30 +33,31 @@ function ProductDetails() {
     }
 
     return (
-        <Grid direction="column" className="details">
-            <div>{product && <Grid direction="column" className="details-container">
-                <Typography variant="h4" color="textSecondary" className='name'>{product.name}</Typography>
-                <div className="info">
-                    <img src={product.image}/>
-                    <div className="text-info">
-                        <Rating name="rating" readOnly size="large" value={product.rating}/>
-                        <Typography variant="body2" color="textSecondary"
-                                    className="description">{product.description}</Typography>
-                        <div>
+        <div className="container">
+            <Grid direction="column" className="details">
+                {product && <Grid direction="column" className="details-container">
+                    <Typography variant="h4" color="textSecondary" className='name'>{product.name}</Typography>
+                    <div className="info">
+                        <img src={product.image}/>
+                        <div className="text-info">
+                            <Rating name="rating" readOnly size="large" value={product.rating}/>
                             <Typography variant="body2" color="textSecondary"
-                                        className="address">
-                                &euro;{product.price}
-                            </Typography>
-                            <Typography variant="body1" color="textSecondary"
-                                        className="in-stock">{inStock()}</Typography>
-                            <Counter product={product}/>
+                                        className="description">{product.description}</Typography>
+                            <div>
+                                <Typography variant="body2" color="textSecondary"
+                                            className="address">
+                                    &euro;{product.price}
+                                </Typography>
+                                <Typography variant="body1" color="textSecondary"
+                                            className="in-stock">{inStock()}</Typography>
+                                <Counter product={product}/>
+                            </div>
+
                         </div>
-
                     </div>
-                </div>
-            </Grid>}</div>
-
-        </Grid>
+                </Grid>}
+            </Grid>
+        </div>
     );
 }
 

@@ -10,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
 import {CartContext} from "../../context/cartContext";
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -27,6 +28,14 @@ const useStyles = makeStyles((theme) => ({
 export default function CartItemsDetails() {
     const classes = useStyles();
     const {cartItems, removeItem} = useContext(CartContext);
+
+    function calcTotal() {
+        let total = 0;
+        for (const x of cartItems) {
+            total += x.item.price * x.quantity;
+        }
+        return Math.round((total + Number.EPSILON) * 100) / 100;
+    }
 
     return (
         <div className={classes.shopping}>
@@ -55,6 +64,13 @@ export default function CartItemsDetails() {
                         </ListItem>);
                     })}
                 </List>
+                <Typography>
+                    Total Price: {calcTotal()}
+                </Typography>
+                <Button variant="contained" color="primary">
+                    Check out
+                </Button>
+
             </div>
         </div>
     );

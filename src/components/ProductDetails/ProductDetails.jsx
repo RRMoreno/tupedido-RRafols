@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {useParams} from "react-router-dom";
 import {getFirestore} from "../../firebase";
 import Product from "../../models/product";
@@ -7,29 +7,46 @@ import Typography from "@material-ui/core/Typography";
 import './ProductDetails.scss';
 import {Rating} from "@material-ui/lab";
 import {Counter} from "../Counter/Counter";
+import {CartContext} from "../CartProvider/CartProvider";
 
 function ProductDetails() {
 
     const [product, setProduct] = useState(undefined);
+    const [initialAmount, setInitialAmount] = useState(undefined);
     const {id} = useParams();
-    console.log(id);
+    const context = useContext(CartContext);
     React.useEffect(() => {
         const db = getFirestore();
         const itemCollection = db.collection("products");
         itemCollection.where('id', "==", Number(id)).limit(1).get().then(querySnapshot => {
             if (querySnapshot.empty) {
                 setProduct(undefined);
+                setInitialAmount(0);
             } else {
                 setProduct(new Product(querySnapshot.docs[0].data()));
+                const cartItem = context.cartItems.find(x => x.item.id === querySnapshot.docs[0].data().id);
+                setInitialAmount(cartItem ? cartItem.quantity : 0);
             }
         })
-    }, [id]);
+    }, [id, context.cartItems]);
 
     function inStock() {
         if (product.qty > 0) {
             return <span>In Stock</span>
         }
         return <span>Unavailable</span>
+    }
+
+    const handleChange = (value) => {
+        context.setQuantity(product, value);
+    };
+
+    const increaseQuantity = () => {
+        context.addItem(product);
+    }
+
+    const decreaseQuantity = () => {
+        context.decreaseItem(product);
     }
 
     return (
@@ -50,7 +67,8 @@ function ProductDetails() {
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary"
                                             className="in-stock">{inStock()}</Typography>
-                                <Counter product={product}/>
+                                {initialAmount && <Counter stock={product.qty} amount={initialAmount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
+                                }
                             </div>
 
                         </div>

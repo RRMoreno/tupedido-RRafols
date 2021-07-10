@@ -49,26 +49,23 @@ const useStyles = makeStyles((theme) => ({
 export function Counter(props) {
 
     const classes = useStyles();
-    const context = useContext(CartContext);
-    const {product} = props;
-    const stock = product.qty;
-    const cartItem = context.cartItems.find(x => x.item.id === product.id);
-    const [quantity, setQuantity] = React.useState(cartItem ? cartItem.quantity : 0);
+    const {stock, amount, onChange, onDecrease, onIncrease} = props;
+    const [quantity, setQuantity] = React.useState(amount);
     const handleChange = (event) => {
         setQuantity(event.target.value);
-        context.setQuantity(product, event.target.value);
+        onChange(event.target.value);
     };
 
     const increaseQuantity = () => {
         if (stock > quantity) {
             setQuantity(quantity + 1);
-            context.addItem(product);
+            onIncrease();
         }
     }
 
     const decreaseQuantity = () => {
         setQuantity(quantity - 1);
-        context.decreaseItem(product);
+        onDecrease();
     }
 
     return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
@@ -9,6 +9,7 @@ import {red} from "@material-ui/core/colors";
 import {Counter} from "../Counter/Counter";
 import {Link} from "react-router-dom";
 import './ProductCard.scss';
+import {CartContext} from "../CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -51,7 +52,21 @@ const useStyles = makeStyles((theme) => ({
 export default function ProductCard(props) {
     const classes = useStyles();
     const {product} = props;
+    const context = useContext(CartContext);
+    const cartItem = context.cartItems.find(x => x.item.id === product.id);
+    const amount = cartItem ? cartItem.quantity : 0;
 
+    const handleChange = (value) => {
+        context.setQuantity(product, value);
+    };
+
+    const increaseQuantity = () => {
+        context.addItem(product);
+    }
+
+    const decreaseQuantity = () => {
+        context.decreaseItem(product);
+    }
 
     return (
         <Card className={classes.root}>
@@ -71,7 +86,7 @@ export default function ProductCard(props) {
             <span className="price">
                     	&euro;{product.price}
             </span>
-            <Counter product={product}/>
+            <Counter stock={product.qty} amount={amount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
         </Card>
     );
 };

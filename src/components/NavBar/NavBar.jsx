@@ -1,15 +1,19 @@
+import {useAuth0} from "@auth0/auth0-react";
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import AccountCircle from '@material-ui/icons/AccountCircle';
+
 import logo from '../../assets/logo.png'
 import CartWidget from "../CartWidget/CartWidget";
 import MainMenu from "../MainMenu/MainMenu";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import {Hidden} from "@material-ui/core";
 import './NavBar.scss';
+import {LoginButton} from "../Login/LoginButton";
+import {LogoutButton} from "../Logout/LogoutButton";
+import Profile from "../Profile/Profile";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,8 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
     const classes = useStyles();
-    const [auth] = React.useState(true);
-
+    const { isAuthenticated } = useAuth0();
 
 
     return (
@@ -38,14 +41,17 @@ export default function NavBar() {
                         <MainMenu/>
                     </Hidden>
                     <div className='menuIcons'>
-                        {auth && (
-                            <div>
-                                <IconButton color="inherit">
-                                    <AccountCircle/>
-                                </IconButton>
-                                <CartWidget/>
-                            </div>
-                        )}
+                        <div className="content-profile">
+                            {isAuthenticated ? (
+                                <>
+                                    <LogoutButton/>
+                                    <Profile/>
+                                </>
+                            ) : (<LoginButton/>
+                            )}
+
+                            <CartWidget/>
+                        </div>
                         <Hidden lgUp>
                             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                                 <MobileMenu/>

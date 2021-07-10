@@ -8,6 +8,7 @@ import './ProductDetails.scss';
 import {Rating} from "@material-ui/lab";
 import {Counter} from "../Counter/Counter";
 import {CartContext} from "../CartProvider/CartProvider";
+import Button from "@material-ui/core/Button";
 
 function ProductDetails() {
 
@@ -67,8 +68,11 @@ function ProductDetails() {
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary"
                                             className="in-stock">{inStock()}</Typography>
-                                {initialAmount && <Counter stock={product.qty} amount={initialAmount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
+                                {initialAmount != null && <Counter stock={product.qty} amount={initialAmount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
                                 }
+                                <Button variant="contained" color="primary">
+                                   Buy now
+                                </Button>
                             </div>
 
                         </div>

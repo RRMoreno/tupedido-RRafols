@@ -3,6 +3,7 @@ import {emphasize, withStyles} from '@material-ui/core/styles';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Chip from '@material-ui/core/Chip';
 import {MenuItems} from "../../constants/menu-items";
+import {Link} from "react-router-dom";
 
 const StyledBreadcrumb = withStyles((theme) => ({
     root: {
@@ -22,16 +23,15 @@ const StyledBreadcrumb = withStyles((theme) => ({
 
 export default function MainMenu() {
 
-    const menuItems = MenuItems;
     return (
         <Breadcrumbs aria-label="breadcrumb">
-            {menuItems.map((item, index) => {
-                return <StyledBreadcrumb
-                    component="a"
-                    href={item.url}
-                    label={item.label}
+            {MenuItems.map((item, index) => {
+                return <Link
+                    to={item.url}
                     key={index}
-                />
+                ><StyledBreadcrumb
+                    label={item.label}
+                /></Link>
             })}
         </Breadcrumbs>
     );

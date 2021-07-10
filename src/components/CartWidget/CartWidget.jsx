@@ -1,7 +1,8 @@
 import React, {useContext} from 'react';
 import {ShoppingCart} from "@material-ui/icons";
 import {Badge} from "@material-ui/core";
-import {CartContext} from "../../context/cartContext";
+import {CartContext} from "../CartProvider/CartProvider";
+
 
 export default function CartWidget(props) {
     const {cartItems} = useContext(CartContext);

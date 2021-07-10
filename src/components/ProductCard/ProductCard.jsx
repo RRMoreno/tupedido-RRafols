@@ -8,6 +8,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
 import {Counter} from "../Counter/Counter";
 import {Link} from "react-router-dom";
+import './ProductCard.scss';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
     textField: {
         width: '25ch',
     },
+
+
 }));
 export default function ProductCard(props) {
     const classes = useStyles();

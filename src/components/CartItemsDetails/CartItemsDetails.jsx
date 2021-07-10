@@ -9,9 +9,10 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
-import {CartContext} from "../../context/cartContext";
+
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
+import {CartContext} from "../CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -49,7 +50,7 @@ export default function CartItemsDetails() {
                         return (<ListItem key={index} dense>
                             <ListItemAvatar>
                                 <Avatar>
-                                    <img className={classes.avatarImg} src={cartItem.item.image}/>
+                                    <img alt={cartItem.item.image} className={classes.avatarImg} src={cartItem.item.image}/>
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText

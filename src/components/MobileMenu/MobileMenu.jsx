@@ -4,6 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import {IconButton} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import {MenuItems} from "../../constants/menu-items";
+import {Link} from "react-router-dom";
 
 export default function MobileMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -15,8 +16,6 @@ export default function MobileMenu() {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
-    const menuItems = MenuItems;
 
     return (
         <div>
@@ -31,8 +30,10 @@ export default function MobileMenu() {
                 onClose={handleClose}
             >
                 {
-                    menuItems.map(item => {
-                        return <MenuItem onClick={handleClose}>{item.label}</MenuItem>
+                    MenuItems.map(item => {
+                        return <Link to={item.url}>
+                            <MenuItem onClick={handleClose}>{item.label}</MenuItem>
+                        </Link>
                     })
                 }
             </Menu>

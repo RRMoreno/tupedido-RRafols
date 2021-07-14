@@ -45,9 +45,11 @@ export default function CartItemsDetails() {
                 Shopping Cart
             </Typography>
             <div>
+                {(!cartItems || cartItems.length === 0) && <span>No Items</span>}
                 <List>
                     {cartItems && cartItems.map((cartItem, index) => {
                         return (<ListItem key={index} dense>
+
                             <ListItemAvatar>
                                 <Avatar>
                                     <img alt={cartItem.item.image} className={classes.avatarImg} src={cartItem.item.image}/>

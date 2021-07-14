@@ -42,15 +42,16 @@ export default function NavBar() {
                     </Hidden>
                     <div className='menuIcons'>
                         <div className="content-profile">
+                            <CartWidget/>
                             {isAuthenticated ? (
                                 <>
-                                    <LogoutButton/>
                                     <Profile/>
+                                    <LogoutButton/>
                                 </>
                             ) : (<LoginButton/>
                             )}
 
-                            <CartWidget/>
+
                         </div>
                         <Hidden lgUp>
                             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">

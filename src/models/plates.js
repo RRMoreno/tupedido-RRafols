@@ -4,6 +4,7 @@ export default class Plate {
     category;
     price;
     image;
+    qty;
 
     constructor(plate) {
         this.id = plate.id;
@@ -11,6 +12,7 @@ export default class Plate {
         this.image = plate.image;
         this.price = plate.price;
         this.name = plate.name;
+        this.qty = plate.qty;
     }
 
 }

@@ -9,7 +9,7 @@ function BannerCarousel(props) {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://www.larepublica.net/storage/images/2020/08/19/20200819153058.delivery.x2.jpg"
+                    src="https://i.pinimg.com/originals/65/aa/a4/65aaa478fb7104cd655b5f826aad1aec.jpg"
                     alt="First slide"
                 />
             </Carousel.Item>

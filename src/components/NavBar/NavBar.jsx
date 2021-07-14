@@ -1,5 +1,5 @@
 import {useAuth0} from "@auth0/auth0-react";
-import React from 'react';
+import React, {useContext} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,6 +14,7 @@ import './NavBar.scss';
 import {LoginButton} from "../Login/LoginButton";
 import {LogoutButton} from "../Logout/LogoutButton";
 import Profile from "../Profile/Profile";
+import {CartContext} from "../CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,8 +30,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavBar() {
     const classes = useStyles();
-    const { isAuthenticated } = useAuth0();
+    const {isAuthenticated} = useAuth0();
+    let {showCart, setShowCart} = useContext(CartContext);
 
+    function toggleCart() {
+        setShowCart(!showCart);
+    }
 
     return (
         <div className={classes.root}>
@@ -42,7 +47,7 @@ export default function NavBar() {
                     </Hidden>
                     <div className='menuIcons'>
                         <div className="content-profile">
-                            <CartWidget/>
+                            <CartWidget onCartClick={toggleCart}/>
                             {isAuthenticated ? (
                                 <>
                                     <Profile/>

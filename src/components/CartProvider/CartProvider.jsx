@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 export const CartContext = React.createContext({
     cartItems: [],
     addItem: (item) => {
@@ -8,11 +9,14 @@ export const CartContext = React.createContext({
     removeItem: (item) => {
     },
     setQuantity: (item, amount) => {
-    }
+    },
+    showCart: false,
+    setShowCart: (value)=>{}
 });
 function CartProvider(props) {
     const {children} = props;
     const [cartItems, setCartItems] = useState([]);
+    const [showCart, setShowCart] = useState(false);
 
     function addItem(item) {
         const copy = [...cartItems];
@@ -55,6 +59,9 @@ function CartProvider(props) {
             setCartItems([...cartItems, {item: item, quantity: amount}]);
         }
     }
+    function shouldShowCart(show){
+        setShowCart(show);
+    }
 
     return (
         <CartContext.Provider value={{
@@ -62,7 +69,9 @@ function CartProvider(props) {
             removeItem: removeItem,
             setQuantity: setQuantity,
             decreaseItem: decreaseItem,
-            addItem: addItem
+            addItem: addItem,
+            showCart: showCart,
+            setShowCart: shouldShowCart
         }}>
             {children}
         </CartContext.Provider>

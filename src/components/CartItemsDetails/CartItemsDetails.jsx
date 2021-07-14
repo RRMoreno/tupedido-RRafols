@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CartItemsDetails() {
     const classes = useStyles();
-    const {cartItems, removeItem} = useContext(CartContext);
+    const {cartItems, removeItem, showCart} = useContext(CartContext);
 
     function calcTotal() {
         let total = 0;
@@ -40,7 +40,7 @@ export default function CartItemsDetails() {
     }
 
     return (
-        <div className={classes.shopping}>
+        showCart ? <div className={classes.shopping}>
             <Typography variant="h6" className={classes.title}>
                 Shopping Cart
             </Typography>
@@ -52,7 +52,8 @@ export default function CartItemsDetails() {
 
                             <ListItemAvatar>
                                 <Avatar>
-                                    <img alt={cartItem.item.image} className={classes.avatarImg} src={cartItem.item.image}/>
+                                    <img alt={cartItem.item.image} className={classes.avatarImg}
+                                         src={cartItem.item.image}/>
                                 </Avatar>
                             </ListItemAvatar>
                             <ListItemText
@@ -72,13 +73,11 @@ export default function CartItemsDetails() {
                     Total Price: {calcTotal()}
                 </Typography>
                 <Link to={'/cart/'}>
-                    <Button variant="contained" color="primary" >
+                    <Button variant="contained" color="primary">
                         Check out
                     </Button>
                 </Link>
-
-
             </div>
-        </div>
+        </div> : <div className={classes.shopping}/>
     );
 }

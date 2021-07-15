@@ -18,9 +18,6 @@ const useStyles = makeStyles((theme) => ({
     title: {
         margin: theme.spacing(4, 0, 2),
     },
-    shopping: {
-        width: '30rem'
-    },
     avatarImg: {
         height: 40,
         width: 40,
@@ -78,6 +75,6 @@ export default function CartItemsDetails() {
                     </Button>
                 </Link>
             </div>
-        </div> : <div className={classes.shopping}/>
+        </div> : <div/>
     );
 }

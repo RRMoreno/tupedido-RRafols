@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {FormControl, InputAdornment, OutlinedInput} from "@material-ui/core";
+import {Backdrop, Fade, FormControl, InputAdornment, Modal, OutlinedInput} from "@material-ui/core";
 import clsx from "clsx";
 import IconButton from "@material-ui/core/IconButton";
 import {Add, AddShoppingCart, Remove} from "@material-ui/icons";
@@ -43,7 +43,18 @@ const useStyles = makeStyles((theme) => ({
     },
     textField: {
         width: '25ch',
-    }
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    paper: {
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid #000',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+    },
 }));
 
 export function Counter(props) {
@@ -55,11 +66,21 @@ export function Counter(props) {
         setQuantity(event.target.value);
         onChange(event.target.value);
     };
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const increaseQuantity = () => {
         if (stock > quantity) {
             setQuantity(quantity + 1);
             onIncrease();
+        } else {
+            handleOpen();
         }
     }
 
@@ -73,6 +94,7 @@ export function Counter(props) {
             <CardActions className={classes.priceContainer}>
                 <IconButton aria-label="add to favorites" onClick={increaseQuantity}>
                     <AddShoppingCart/>
+
                 </IconButton>
                 {quantity > 0 && <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
                     <OutlinedInput
@@ -94,6 +116,25 @@ export function Counter(props) {
                 </FormControl>}
 
             </CardActions>}
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className={classes.modal}
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={open}>
+                    <div className={classes.paper}>
+                        <h2 id="transition-modal-title">No stock available</h2>
+                        <p id="transition-modal-description">Sorry, we are out of stock.</p>
+                    </div>
+                </Fade>
+            </Modal>
         </div>
 
     );

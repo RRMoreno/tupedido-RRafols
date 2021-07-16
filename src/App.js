@@ -11,6 +11,7 @@ import CartItemsDetails from "./components/CartItemsDetails/CartItemsDetails";
 import CartPage from "./components/CartPage/CartPage";
 import CartProvider from "./components/CartProvider/CartProvider";
 import {Grid} from "@material-ui/core";
+import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
 
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
                                     </Route>
                                     <Route path="/cart">
                                         <CartPage/>
+                                    </Route>
+                                    <Route path="/whoWeAre">
+                                        <WhoWeAre/>
                                     </Route>
                                 </Switch>
                             </Grid>

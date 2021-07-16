@@ -7,7 +7,6 @@ import Typography from "@material-ui/core/Typography";
 import {Grid, Icon} from "@material-ui/core";
 import {Home} from "@material-ui/icons";
 import './RestaurantDetails.scss';
-import Product from "../../models/product";
 import Plate from "../../models/plates";
 
 

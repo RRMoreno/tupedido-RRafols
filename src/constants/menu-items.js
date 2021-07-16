@@ -1,6 +1,6 @@
 export const MenuItems = [
     {icon: 'HomeIcon', label: 'Home', url: '/'},
-    {icon: '', label: 'Who we are?', url: '/'},
+    {icon: '', label: 'Who we are?', url: '/whoWeAre'},
     {icon: '', label: 'Orders', url: '/'},
     {icon: '', label: 'Supermarket Catalog', url: '/supermarket'},
     {icon: '', label: 'Restaurants', url: '/restaurants'},

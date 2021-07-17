@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import React from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
 import Home from "./components/Home/Home";
 import Restaurants from "./components/Restaurants/Restaurants";
 import Supermarket from "./components/Supermarket/Supermarket";
@@ -20,11 +20,15 @@ function App() {
             <Router>
                 <div className="App">
                     <NavBar />
+
                     <Grid container>
                         <Grid container xs={12} md={9} justify={"flex-end"}>
                             <Grid item xs={12} md={9}>
                                 <Switch>
                                     <Route exact path="/">
+                                        <Redirect to="/home" />
+                                    </Route>
+                                    <Route exact path="/home">
                                         <Home/>
                                     </Route>
                                     <Route path="/restaurants">

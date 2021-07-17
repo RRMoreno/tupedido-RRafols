@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Backdrop, Fade, FormControl, InputAdornment, Modal, OutlinedInput} from "@material-ui/core";
 import clsx from "clsx";
 import IconButton from "@material-ui/core/IconButton";
@@ -6,7 +6,7 @@ import {Add, AddShoppingCart, Remove} from "@material-ui/icons";
 import CardActions from "@material-ui/core/CardActions";
 import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
-import {CartContext} from "../CartProvider/CartProvider";
+
 
 
 const useStyles = makeStyles((theme) => ({

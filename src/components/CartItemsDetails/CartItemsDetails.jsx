@@ -12,7 +12,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
-import {CartContext} from "../CartProvider/CartProvider";
+import {CartContext} from "../../providers/CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -69,7 +69,7 @@ export default function CartItemsDetails() {
                 <Typography>
                     Total Price: {calcTotal()}
                 </Typography>
-                <Link to={'/cart/'}>
+                <Link to={'/checkout/'}>
                     <Button variant="contained" color="primary">
                         Check out
                     </Button>

@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import './ProductDetails.scss';
 import {Rating} from "@material-ui/lab";
 import {Counter} from "../Counter/Counter";
-import {CartContext} from "../CartProvider/CartProvider";
+import {CartContext} from "../../providers/CartProvider/CartProvider";
 import Button from "@material-ui/core/Button";
 
 function ProductDetails() {

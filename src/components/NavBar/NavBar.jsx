@@ -14,7 +14,7 @@ import './NavBar.scss';
 import {LoginButton} from "../Login/LoginButton";
 import {LogoutButton} from "../Logout/LogoutButton";
 import Profile from "../Profile/Profile";
-import {CartContext} from "../CartProvider/CartProvider";
+import {CartContext} from "../../providers/CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
     root: {

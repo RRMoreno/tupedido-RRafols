@@ -30,8 +30,8 @@ export default function MobileMenu() {
                 onClose={handleClose}
             >
                 {
-                    MenuItems.map(item => {
-                        return <Link to={item.url}>
+                    MenuItems.map((item, index) => {
+                        return <Link to={item.url} key={index}>
                             <MenuItem onClick={handleClose}>{item.label}</MenuItem>
                         </Link>
                     })

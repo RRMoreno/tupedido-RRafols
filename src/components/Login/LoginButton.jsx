@@ -4,16 +4,9 @@ import './LoginButton.scss'
 
 
 export const LoginButton = () => {
-    const {loginWithRedirect} = useAuth0();
+    const {loginWithPopup} = useAuth0();
 
-    function dologin() {
-        console.log('click');
-        loginWithRedirect().then(value => {
-            console.log(value);
-        })
-    }
-
-    return <button className="login-button" onClick={dologin} color="primary">
+    return <button className="login-button" onClick={loginWithPopup} color="primary">
         Login
     </button>
 }

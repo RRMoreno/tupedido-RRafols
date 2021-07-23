@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import {Counter} from "../Counter/Counter";
-import {CartContext} from "../CartProvider/CartProvider";
+import {CartContext} from "../../providers/CartProvider/CartProvider";
 
 const useStyles = makeStyles({
     root: {

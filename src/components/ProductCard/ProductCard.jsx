@@ -9,7 +9,7 @@ import {red} from "@material-ui/core/colors";
 import {Counter} from "../Counter/Counter";
 import {Link} from "react-router-dom";
 import './ProductCard.scss';
-import {CartContext} from "../CartProvider/CartProvider";
+import {CartContext} from "../../providers/CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
     root: {

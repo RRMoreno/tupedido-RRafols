@@ -8,10 +8,11 @@ import Supermarket from "./components/Supermarket/Supermarket";
 import RestaurantDetails from "./components/RestaurantDetails/RestaurantDetails";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import CartItemsDetails from "./components/CartItemsDetails/CartItemsDetails";
-import CartPage from "./components/CartPage/CartPage";
-import CartProvider from "./components/CartProvider/CartProvider";
+import CartProvider from "./providers/CartProvider/CartProvider";
 import {Grid} from "@material-ui/core";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
+import Checkout from "./components/Checkout/Checkout";
+import CheckoutProvider from "./providers/CheckoutProvider/CheckoutProvider";
 
 
 function App() {
@@ -43,8 +44,10 @@ function App() {
                                     <Route path="/product/:id">
                                         <ProductDetails/>
                                     </Route>
-                                    <Route path="/cart">
-                                        <CartPage/>
+                                    <Route path="/checkout">
+                                        <CheckoutProvider>
+                                            <Checkout/>
+                                        </CheckoutProvider>
                                     </Route>
                                     <Route path="/whoWeAre">
                                         <WhoWeAre/>

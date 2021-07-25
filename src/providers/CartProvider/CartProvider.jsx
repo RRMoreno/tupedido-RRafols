@@ -11,7 +11,8 @@ export const CartContext = React.createContext({
     setQuantity: (item, amount) => {
     },
     showCart: false,
-    setShowCart: (value)=>{}
+    setShowCart: (value)=>{},
+    emptyCart: ()=>{}
 });
 function CartProvider(props) {
     const {children} = props;
@@ -63,6 +64,10 @@ function CartProvider(props) {
         setShowCart(show);
     }
 
+    function emptyCart(){
+        setCartItems([]);
+    }
+
     return (
         <CartContext.Provider value={{
             cartItems: cartItems,
@@ -71,7 +76,8 @@ function CartProvider(props) {
             decreaseItem: decreaseItem,
             addItem: addItem,
             showCart: showCart,
-            setShowCart: shouldShowCart
+            setShowCart: shouldShowCart,
+            emptyCart: emptyCart
         }}>
             {children}
         </CartContext.Provider>

@@ -24,17 +24,17 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+export const calcTotal = (cartItems) => {
+    let total = 0;
+    for (const x of cartItems) {
+        total += x.item.price * x.quantity;
+    }
+    return Math.round((total + Number.EPSILON) * 100) / 100;
+}
+
 export default function CartItemsDetails() {
     const classes = useStyles();
     const {cartItems, removeItem, showCart} = useContext(CartContext);
-
-    function calcTotal() {
-        let total = 0;
-        for (const x of cartItems) {
-            total += x.item.price * x.quantity;
-        }
-        return Math.round((total + Number.EPSILON) * 100) / 100;
-    }
 
     return (
         showCart ? <div className={classes.shopping}>
@@ -67,7 +67,7 @@ export default function CartItemsDetails() {
                     })}
                 </List>
                 <Typography>
-                    Total Price: {calcTotal()}
+                    Total Price: {calcTotal(cartItems)}
                 </Typography>
                 <Link to={'/checkout/'}>
                     <Button variant="contained" color="primary">

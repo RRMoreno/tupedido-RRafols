@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function ProductCard(props) {
     const classes = useStyles();
-    const {product} = props;
+    const {product, readonly} = props;
     const context = useContext(CartContext);
     const cartItem = context.cartItems.find(x => x.item.id === product.id);
     const amount = cartItem ? cartItem.quantity : 0;
@@ -86,7 +86,7 @@ export default function ProductCard(props) {
             <span className="price">
                     	&euro;{product.price}
             </span>
-            <Counter stock={product.qty} amount={amount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
+            {!readonly && <Counter stock={product.qty} amount={amount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>}
         </Card>
     );
 };

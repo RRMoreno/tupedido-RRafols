@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {getFirestore} from "../../firebase";
 import Product from "../../models/product";
 import {Grid} from "@material-ui/core";
@@ -9,6 +9,7 @@ import {Rating} from "@material-ui/lab";
 import {Counter} from "../Counter/Counter";
 import {CartContext} from "../../providers/CartProvider/CartProvider";
 import Button from "@material-ui/core/Button";
+import {useHistory} from "react-router-dom";
 
 function ProductDetails() {
 
@@ -16,6 +17,7 @@ function ProductDetails() {
     const [initialAmount, setInitialAmount] = useState(undefined);
     const {id} = useParams();
     const context = useContext(CartContext);
+    const history = useHistory();
     React.useEffect(() => {
         const db = getFirestore();
         const itemCollection = db.collection("products");
@@ -30,6 +32,11 @@ function ProductDetails() {
             }
         })
     }, [id, context.cartItems]);
+
+    function buyNow() {
+        context.addItem(product);
+        history.push('/checkout');
+    }
 
     function inStock() {
         if (product.qty > 0) {
@@ -68,11 +75,15 @@ function ProductDetails() {
                                 </Typography>
                                 <Typography variant="body1" color="textSecondary"
                                             className="in-stock">{inStock()}</Typography>
-                                {initialAmount != null && <Counter stock={product.qty} amount={initialAmount} onChange={handleChange} onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
+                                {initialAmount != null &&
+                                <Counter stock={product.qty} amount={initialAmount} onChange={handleChange}
+                                         onIncrease={increaseQuantity} onDecrease={decreaseQuantity}/>
                                 }
-                                <Button variant="contained" color="primary">
-                                   Buy now
+
+                                <Button variant="contained" color="primary" onClick={buyNow}>
+                                    Buy now
                                 </Button>
+
                             </div>
 
                         </div>

@@ -13,6 +13,8 @@ import {Grid} from "@material-ui/core";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre";
 import Checkout from "./components/Checkout/Checkout";
 import CheckoutProvider from "./providers/CheckoutProvider/CheckoutProvider";
+import Order from "./components/Order/Order";
+import MyOrders from "./components/MyOrders/MyOrders";
 
 
 function App() {
@@ -51,6 +53,12 @@ function App() {
                                     </Route>
                                     <Route path="/whoWeAre">
                                         <WhoWeAre/>
+                                    </Route>
+                                    <Route exact path="/orders/:id">
+                                        <Order/>
+                                    </Route>
+                                    <Route exact path="/orders">
+                                        <MyOrders/>
                                     </Route>
                                 </Switch>
                             </Grid>

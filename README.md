@@ -10,6 +10,7 @@ TuPedido es una aplicacion pensada para su uso en Cuba donde es muy comun en una
 * Correr la aplicacion: `npm run start` o `yarn run start`
 
 ![img.png](img.png)
+![img_1.png](img_1.png)
 
 **Algunas Librerias usadas**
 * https://www.npmjs.com/package/@auth0/auth0-react Auth0 para la autenticacion con redes sociales

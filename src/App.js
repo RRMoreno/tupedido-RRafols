@@ -20,7 +20,7 @@ import MyOrders from "./components/MyOrders/MyOrders";
 function App() {
     return (
         <CartProvider>
-            <Router>
+            <Router basename="/tupedido-RRafols">
                 <div className="App">
                     <NavBar />
 

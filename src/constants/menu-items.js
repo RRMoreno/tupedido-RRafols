@@ -4,6 +4,6 @@ export const MenuItems = [
     {icon: '', label: 'Orders', url: '/orders'},
     {icon: '', label: 'Supermarket Catalog', url: '/supermarket'},
     {icon: '', label: 'Restaurants', url: '/restaurants'},
-    {icon: '', label: 'Service & Help', url: '/'},
-    {icon: '', label: 'Contact us', url: '/'},
+    // {icon: '', label: 'Service & Help', url: '/'},
+    // {icon: '', label: 'Contact us', url: '/'},
 ];

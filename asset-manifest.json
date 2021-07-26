@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/tupedido-RRafols/static/css/main.339a2351.chunk.css",
-    "main.js": "/tupedido-RRafols/static/js/main.04f42642.chunk.js",
-    "main.js.map": "/tupedido-RRafols/static/js/main.04f42642.chunk.js.map",
-    "runtime-main.js": "/tupedido-RRafols/static/js/runtime-main.bb89d104.js",
-    "runtime-main.js.map": "/tupedido-RRafols/static/js/runtime-main.bb89d104.js.map",
-    "static/css/2.61b4cb56.chunk.css": "/tupedido-RRafols/static/css/2.61b4cb56.chunk.css",
-    "static/js/2.e776994b.chunk.js": "/tupedido-RRafols/static/js/2.e776994b.chunk.js",
-    "static/js/2.e776994b.chunk.js.map": "/tupedido-RRafols/static/js/2.e776994b.chunk.js.map",
-    "static/js/3.c378bda1.chunk.js": "/tupedido-RRafols/static/js/3.c378bda1.chunk.js",
-    "static/js/3.c378bda1.chunk.js.map": "/tupedido-RRafols/static/js/3.c378bda1.chunk.js.map",
+    "main.css": "/tupedido-RRafols/static/css/main.4e152efe.chunk.css",
+    "main.js": "/tupedido-RRafols/static/js/main.7a0a41f4.chunk.js",
+    "main.js.map": "/tupedido-RRafols/static/js/main.7a0a41f4.chunk.js.map",
+    "runtime-main.js": "/tupedido-RRafols/static/js/runtime-main.1df7a901.js",
+    "runtime-main.js.map": "/tupedido-RRafols/static/js/runtime-main.1df7a901.js.map",
+    "static/css/2.4be38407.chunk.css": "/tupedido-RRafols/static/css/2.4be38407.chunk.css",
+    "static/js/2.bb96bec7.chunk.js": "/tupedido-RRafols/static/js/2.bb96bec7.chunk.js",
+    "static/js/2.bb96bec7.chunk.js.map": "/tupedido-RRafols/static/js/2.bb96bec7.chunk.js.map",
+    "static/js/3.b087e377.chunk.js": "/tupedido-RRafols/static/js/3.b087e377.chunk.js",
+    "static/js/3.b087e377.chunk.js.map": "/tupedido-RRafols/static/js/3.b087e377.chunk.js.map",
     "index.html": "/tupedido-RRafols/index.html",
-    "static/css/2.61b4cb56.chunk.css.map": "/tupedido-RRafols/static/css/2.61b4cb56.chunk.css.map",
-    "static/css/main.339a2351.chunk.css.map": "/tupedido-RRafols/static/css/main.339a2351.chunk.css.map",
-    "static/js/2.e776994b.chunk.js.LICENSE.txt": "/tupedido-RRafols/static/js/2.e776994b.chunk.js.LICENSE.txt",
+    "static/css/2.4be38407.chunk.css.map": "/tupedido-RRafols/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.4e152efe.chunk.css.map": "/tupedido-RRafols/static/css/main.4e152efe.chunk.css.map",
+    "static/js/2.bb96bec7.chunk.js.LICENSE.txt": "/tupedido-RRafols/static/js/2.bb96bec7.chunk.js.LICENSE.txt",
     "static/media/logo.d1f1e5ef.png": "/tupedido-RRafols/static/media/logo.d1f1e5ef.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.bb89d104.js",
-    "static/css/2.61b4cb56.chunk.css",
-    "static/js/2.e776994b.chunk.js",
-    "static/css/main.339a2351.chunk.css",
-    "static/js/main.04f42642.chunk.js"
+    "static/js/runtime-main.1df7a901.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.bb96bec7.chunk.js",
+    "static/css/main.4e152efe.chunk.css",
+    "static/js/main.7a0a41f4.chunk.js"
   ]
 }

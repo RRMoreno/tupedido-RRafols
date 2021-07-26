@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tupedido-RRafols/static/css/main.4e152efe.chunk.css",
-    "main.js": "/tupedido-RRafols/static/js/main.8bb730dd.chunk.js",
-    "main.js.map": "/tupedido-RRafols/static/js/main.8bb730dd.chunk.js.map",
+    "main.js": "/tupedido-RRafols/static/js/main.a25e6a5b.chunk.js",
+    "main.js.map": "/tupedido-RRafols/static/js/main.a25e6a5b.chunk.js.map",
     "runtime-main.js": "/tupedido-RRafols/static/js/runtime-main.1df7a901.js",
     "runtime-main.js.map": "/tupedido-RRafols/static/js/runtime-main.1df7a901.js.map",
     "static/css/2.4be38407.chunk.css": "/tupedido-RRafols/static/css/2.4be38407.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.4be38407.chunk.css",
     "static/js/2.bb96bec7.chunk.js",
     "static/css/main.4e152efe.chunk.css",
-    "static/js/main.8bb730dd.chunk.js"
+    "static/js/main.a25e6a5b.chunk.js"
   ]
 }

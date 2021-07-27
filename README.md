@@ -2,7 +2,10 @@ TuPedido
 
 TuPedido es una aplicacion pensada para su uso en Cuba donde es muy comun en una misma aplicacion encontrar los mejores platos de los restaurantes y la compra del supermercado.
 
-**Demo:** https://rrmoreno.github.io/tupedido-RRafols/
+**Demo:** 
+https://rrmoreno.github.io/tupedido-RRafols/
+http://g.recordit.co/WhQKa2Vra7.gif part1
+http://g.recordit.co/FlN95zcIr2.gif part2
 
 **Pasos a seguir para correr local**
 * Clonar de https://github.com/RRMoreno/tupedido-RRafols

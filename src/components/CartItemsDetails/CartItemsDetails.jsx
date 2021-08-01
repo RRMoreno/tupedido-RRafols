@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 import Button from '@material-ui/core/Button';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {CartContext} from "../../providers/CartProvider/CartProvider";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +35,11 @@ export const calcTotal = (cartItems) => {
 export default function CartItemsDetails() {
     const classes = useStyles();
     const {cartItems, removeItem, showCart} = useContext(CartContext);
+    const history = useHistory();
+
+    function goToCheckout() {
+        history.push('/checkout');
+    }
 
     return (
         showCart ? <div className={classes.shopping}>
@@ -69,11 +74,9 @@ export default function CartItemsDetails() {
                 <Typography>
                     Total Price: {calcTotal(cartItems)}
                 </Typography>
-                <Link to={'/checkout/'}>
-                    <Button variant="contained" color="primary">
-                        Check out
-                    </Button>
-                </Link>
+                <Button variant="contained" color="primary" onClick={goToCheckout} disabled={cartItems.length === 0}>
+                    Check out
+                </Button>
             </div>
         </div> : <div/>
     );
